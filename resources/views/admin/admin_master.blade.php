@@ -72,7 +72,7 @@
         <!-- category -->
         <a href="{{route('admin.category')}}" class="sl-menu-link  @yield('category')">
           <div class="sl-menu-item">
-            <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
+            <i class="menu-item-icon icon ion-grid tx-22"></i>
             <span class="menu-item-label">Category</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
@@ -81,14 +81,14 @@
         <!-- Brand -->
         <a href="{{route('admin.brand')}}" class="sl-menu-link  @yield('brand')">
           <div class="sl-menu-item">
-            <i class="menu-item-icon icon-brand-apple tx-22"></i>
+            <i class="menu-item-icon icon  ion-ios-redo tx-22"></i>
             <span class="menu-item-label">Brand</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <!-- Coupon -->
         <a href="{{route('admin.coupon')}}" class="sl-menu-link  @yield('coupon')">
           <div class="sl-menu-item">
-            <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
+            <i class="menu-item-icon ion-ios-filing-outline tx-20"></i>
             <span class="menu-item-label">Coupon</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
@@ -96,7 +96,7 @@
     <!-- ====Products Menu===== -->
         <a href="" class="sl-menu-link @yield('product')">
           <div class="sl-menu-item">
-            <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
+            <i class="menu-item-icon ion-ios-pricetag-outline tx-20"></i>
             <span class="menu-item-label">Products</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
@@ -109,7 +109,7 @@
 
           <a href="{{route('admin.orders')}}" class="sl-menu-link  @yield('orders')">
               <div class="sl-menu-item">
-                  <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
+                  <i class="menu-item-icon  ion-bag tx-20"></i>
                   <span class="menu-item-label">Orders</span>
               </div><!-- menu-item -->
           </a><!-- sl-menu-link -->

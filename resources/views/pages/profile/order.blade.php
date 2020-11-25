@@ -56,10 +56,10 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>User profile</h2>
+                        <h2>User Order</h2>
                         <div class="breadcrumb__option">
-                            <a href="{{route('home')}}">Home</a>
-                            <span>Profile</span>
+                            <a href="{{route('homepage')}}">Home</a>
+                            <span>Order</span>
                         </div>
                     </div>
                 </div>
@@ -67,45 +67,61 @@
         </div>
     </section>
     <!-- Breadcrumb Section End -->
-<div class="container">
-    <div class="row mt-5" >
-        <div class="col-sm-4">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap" height="100%" width="100%" style="border-radius: 50%">
-               <ul class="list-group-flush list-group">
-                   <a href="{{route('homepage')}}" class="btn btn-primary btn-sm btn-block">Home</a>
-                   <a href="{{route('user.order')}}" class="btn btn-success btn-sm btn-block">My Order</a>
-                   <a class="btn btn-warning btn-sm btn-block" href="{{ route('logout') }}"
-                      onclick="event.preventDefault();
+    <div class="container">
+        <div class="row mt-5" >
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap" height="100%" width="100%" style="border-radius: 50%">
+                    <ul class="list-group-flush list-group">
+                        <a href="{{route('home')}}" class="btn btn-primary btn-sm btn-block">Home</a>
+                        <a href="{{route('user.order')}}" class="btn btn-primary btn-sm btn-block">My Order</a>
+                        <a class="btn btn-warning btn-sm btn-block" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
-                       {{ __('Logout') }}
-                   </a>
+                            {{ __('Logout') }}
+                        </a>
 
-                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                       @csrf
-                   </form>
-               </ul>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-8">
-            <div class="card">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="examN">Name</label>
-                            <input type="email" class="form-control" id="examN" aria-describedby="emailHelp" value="{{Auth::user()->name}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="examE">Email</label>
-                            <input type="email" class="form-control" id="examE" aria-describedby="emailHelp" value="{{Auth::user()->email}}">
-                        </div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
 
+                                <th scope="col">Invoice No</th>
+                                <th scope="col">PaymentType</th>
+                                <th scope="col">SubTotal</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Coupon</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($orders as $order)
+                            <tr>
 
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </form>
+                                <td>#{{$order->invoice_no}}</td>
+                                <td>{{$order->payment_type}}</td>
+                                <td>{{$order->subtotal}}</td>
+                                <td>{{$order->total}}</td>
+                                <td>{{$order->coupon_discount}} %</td>
+                                <td>
+                                    <a href="" class="btn btn-sm btn-primary">View</a>
+                                </td>
+
+                            </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

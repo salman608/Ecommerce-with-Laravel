@@ -89,3 +89,6 @@ Route::get('product-details/{product_id}','FontendController@productDetails')->n
 Route::get('checkout','CheckoutController@index')->name('checkout');
 Route::post('place/order','OrderController@storeOrder')->name('place-order');
 Route::get('order/complete','OrderController@orderComplete')->name('order-complete');
+
+//=============User Controller route=============
+Route::get('user/order','UserController@order')->name('user.order');

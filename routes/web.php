@@ -92,3 +92,11 @@ Route::get('order/complete','OrderController@orderComplete')->name('order-comple
 
 //=============User Controller route=============
 Route::get('user/order','UserController@order')->name('user.order');
+Route::get('user/order/view/{order_id}','UserController@orderView')->name('user-order-view');
+
+
+//================Shop Pge Setup==============
+Route::get('shop/page','FontendController@shopPage')->name('shop.page');
+
+//===============Categoriwise product show==========
+Route::get('category/show/{cat_id}','FontendController@categoryByProduct')->name('categoryByProduct');

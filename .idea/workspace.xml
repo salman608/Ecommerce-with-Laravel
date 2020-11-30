@@ -19,7 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="718df389-221a-4dbe-9747-f61a3b15258a" name="Default Changelist" comment="" />
+    <list default="true" id="718df389-221a-4dbe-9747-f61a3b15258a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/profile/order_view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/shop.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FontendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FontendController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/fontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/fontend_master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/fontend_master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/order_complete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/order_complete.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/product-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/product-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/profile/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/profile/order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/wishpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/wishpage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,6 +186,8 @@
       <workItem from="1605810843641" duration="9256000" />
       <workItem from="1605849224938" duration="1781000" />
       <workItem from="1606276542238" duration="3648000" />
+      <workItem from="1606623182422" duration="12967000" />
+      <workItem from="1606755719519" duration="4529000" />
     </task>
     <servers />
   </component>
@@ -189,10 +207,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606278958348">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606653334623">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606278958348" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606653334623" />
     <state x="183" y="2" key="SettingsEditor" timestamp="1605116946253">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

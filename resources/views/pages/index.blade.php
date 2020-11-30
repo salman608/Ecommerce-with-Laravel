@@ -5,20 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span>All Category</span>
-                    </div>
-                    @php
-                      $categories=App\Category::where('category_status',1)->latest()->get();
-                    @endphp
-                    <ul>
-                      @foreach($categories as $cat)
-                        <li><a href="#">{{$cat->category_name}}</a></li>
-                      @endforeach
-                    </ul>
-                </div>
+                   @include('pages.inc.category');
             </div>
             <div class="col-lg-9">
                 <div class="hero__search">
@@ -106,12 +93,15 @@
                         <ul class="featured__item__pic__hover">
                             <li><a href="{{route('add-wishlist',$product->id)}}"><i class="fa fa-heart"></i></a></li>
                             <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <form action="{{url('add/to-cart/'.$product->id)}}" method="POST">
-                            @csrf
-                            <input type="hidden" name="product_price" value="{{$product->product_price}}">
-                            <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
+                            <li>
+                                <form action="{{url('add/to-cart/'.$product->id)}}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="product_price" value="{{$product->product_price}}">
+                                    <button type="submit"><i class="fa fa-shopping-cart" style="border-radius: 50% "></i></button>
 
-                          </form>
+                                </form>
+                            </li>
+
                         </ul>
                     </div>
                     <div class="featured__item__text">
@@ -193,7 +183,7 @@
                         @foreach($lmt_p as $product)
                           <a href="#" class="latest-product__item">
                               <div class="latest-product__item__pic">
-                                  <img src="{{$product->image_one}}" alt="">
+                                  <img src="{{$product->image_one}}" alt="" width="100px">
                               </div>
                               <div class="latest-product__item__text">
                                   <h6>{{$product->product_name}}</h6>
@@ -206,7 +196,7 @@
                         @foreach($lmt_p as $product)
                           <a href="#" class="latest-product__item">
                               <div class="latest-product__item__pic">
-                                  <img src="{{$product->image_one}}" alt="">
+                                  <img src="{{$product->image_one}}" alt="" width="100px">
                               </div>
                               <div class="latest-product__item__text">
                                   <h6>{{$product->product_name}}</h6>
@@ -256,65 +246,6 @@
 </section>
 <!-- Latest Product Section End -->
 
-<!-- Blog Section Begin -->
-<section class="from-blog spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title from-blog__title">
-                    <h2>From The Blog</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic">
-                        <img src="{{asset('fontend')}}/img/blog/blog-1.jpg" alt="">
-                    </div>
-                    <div class="blog__item__text">
-                        <ul>
-                            <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                            <li><i class="fa fa-comment-o"></i> 5</li>
-                        </ul>
-                        <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic">
-                        <img src="{{asset('fontend')}}/img/blog/blog-2.jpg" alt="">
-                    </div>
-                    <div class="blog__item__text">
-                        <ul>
-                            <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                            <li><i class="fa fa-comment-o"></i> 5</li>
-                        </ul>
-                        <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog__item">
-                    <div class="blog__item__pic">
-                        <img src="{{asset('fontend')}}/img/blog/blog-3.jpg" alt="">
-                    </div>
-                    <div class="blog__item__text">
-                        <ul>
-                            <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                            <li><i class="fa fa-comment-o"></i> 5</li>
-                        </ul>
-                        <h5><a href="#">Visit the clean farm in the US</a></h5>
-                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Blog Section End -->
+
 
 @endsection

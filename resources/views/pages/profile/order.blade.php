@@ -112,7 +112,7 @@
                                 <td>{{$order->total}}</td>
                                 <td>{{$order->coupon_discount}} %</td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-primary">View</a>
+                                    <a href="{{route('user-order-view',$order->id)}}" class="btn btn-sm btn-primary">View</a>
                                 </td>
 
                             </tr>

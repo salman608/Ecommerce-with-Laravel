@@ -6,21 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span>All Categories</span>
-                    </div>
-                    @php
-                      $categories=App\Category::where('category_status',1)->latest()->get();
-                    @endphp
-                    <ul>
-                      @foreach($categories as $cat)
-                        <li><a href="#">{{$cat->category_name}}</a></li>
-                      @endforeach
-
-                    </ul>
-                </div>
+                @include('pages.inc.category');
             </div>
             <div class="col-lg-9">
                 <div class="hero__search">
